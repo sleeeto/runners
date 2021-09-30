@@ -14,6 +14,11 @@ Notable changes:
 
 - **Rails Best Practices** Drop support [#2701](https://github.com/sider/runners/pull/2701)
 
+Updated environments:
+
+- **devon_rex** 2.45.10 -> 2.45.11 [#2715](https://github.com/sider/runners/pull/2715) ([diff](https://github.com/sider/devon_rex/compare/2.45.10...2.45.11))
+- **Bundler** 2.2.26 -> 2.2.28 [#2715](https://github.com/sider/runners/pull/2715)
+
 Updated tools:
 
 - **CoffeeLint** 5.0.2 to 5.0.4 [#2707](https://github.com/sider/runners/pull/2707)
