@@ -19,9 +19,8 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - run: |
-          bundle exec rake steep:check | ruby -pe 'sub(/^\+ (.+):(\d+):(\d+): (.+)$/, %q{::error file=\1,line=\2,col=\3::\4})'
-        shell: bash
+      - run: echo "::add-matcher::.github/steep-matcher.json"
+      - run: bundle exec rake steep:check
 
   stats:
     runs-on: ubuntu-latest
