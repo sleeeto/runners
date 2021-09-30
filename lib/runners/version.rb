@@ -1,3 +1,3 @@
 module Runners
-  VERSION = "0.53.6".freeze
+  VERSION = "0.54.0".freeze
 end
