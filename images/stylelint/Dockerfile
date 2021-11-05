@@ -25,7 +25,7 @@ RUN cd "${RUNNERS_DIR}" && \
 # Install the default version
 COPY --chown=${RUNNER_USER}:${RUNNER_GROUP} images/stylelint/package.json ${RUNNERS_DEPS_DIR}/
 RUN cd "${RUNNERS_DEPS_DIR}" && \
-    npm install --strict-peer-deps --ignore-scripts --engine-strict --no-progress --no-save && \
+    npm install --ignore-scripts --engine-strict --no-progress --no-save && \
     rm package*.json && \
     # We can't use NODE_PATH
     # See the details here: https://github.com/sider/runners/issues/2636
