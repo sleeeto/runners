@@ -6,7 +6,7 @@ FROM rhysd/actionlint:1.6.4 as actionlint
 FROM koalaman/shellcheck:v0.7.2 as shellcheck
 
 
-FROM sider/devon_rex_python:2.45.11
+FROM sider/devon_rex_python:master
 
 
 ENV RUNNERS_DEPS_DIR ${RUNNER_USER_HOME}/dependencies

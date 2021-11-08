@@ -4,7 +4,7 @@
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 FROM hadolint/hadolint:v2.7.0-debian as hadolint
 
-FROM sider/devon_rex_base:2.45.11
+FROM sider/devon_rex_base:master
 
 COPY --chown=${RUNNER_USER}:${RUNNER_GROUP} --from=hadolint /bin/hadolint ${RUNNER_USER_BIN}/
 
