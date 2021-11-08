@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
   # 3rd-party libraries
   spec.add_dependency "aws-sdk-s3", ">= 1.87"
   spec.add_dependency "bugsnag", ">= 6.18"
-  spec.add_dependency "git_diff_parser", ">= 3.2"
+  spec.add_dependency "git_diff_parser", ">= 4.0"
   spec.add_dependency "jsonseq", ">= 0.2"
   spec.add_dependency "nokogiri", ">= 1.11"
   spec.add_dependency "parallel", ">= 1.20"
