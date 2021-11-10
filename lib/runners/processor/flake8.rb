@@ -17,8 +17,8 @@ module Runners
     register_config_schema SCHEMA.config
 
     DEFAULT_TARGET = ".".freeze
-    DEFAULT_CONFIG_PATH = (Pathname(Dir.home) / '.config' / 'flake8').to_path.freeze
-    DEFAULT_IGNORED_CONFIG_PATH = (Pathname(Dir.home) / '.config' / 'ignored-config.ini').to_path.freeze
+    DEFAULT_CONFIG_PATH = (Pathname(Dir.home) / 'sider_recommended_flake8.ini').to_path.freeze
+    DEFAULT_IGNORED_CONFIG_PATH = (Pathname(Dir.home) / 'ignored-config.ini').to_path.freeze
 
     def self.config_example
       <<~'YAML'
@@ -64,14 +64,16 @@ module Runners
 
     private
 
+    def having_user_defined_config?
+      (current_dir / '.flake8').exist? ||
+        current_dir.glob('{setup.cfg,tox.ini}').any? { |f| f.read.match?(/^\[flake8\]$/m) }
+    end
+
     def prepare_config
       # @see https://flake8.pycqa.org/en/latest/user/configuration.html
-      case
-      when (current_dir / '.flake8').exist?
-        File.delete DEFAULT_CONFIG_PATH
-      when current_dir.glob('{setup.cfg,tox.ini}').any? { |f| f.read.match?(/^\[flake8\]$/m) }
-        File.delete DEFAULT_CONFIG_PATH
-      end
+
+      # Copy our default rules if the repository does not have own rule files.
+      FileUtils.copy DEFAULT_CONFIG_PATH, (current_dir / '.flake8').to_path unless having_user_defined_config?
     end
 
     def parse_result(output)

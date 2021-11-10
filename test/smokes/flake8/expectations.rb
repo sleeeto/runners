@@ -1,33 +1,11 @@
 s = Runners::Testing::Smoke
 
-default_version = "3.9.2"
+default_version = "4.0.1"
 
 s.add_test(
   "sandbox_django",
   type: "success",
   issues: [
-    {
-      path: "app1/views.py",
-      location: { start_line: 6, start_column: 13 },
-      id: "E113",
-      message: "unexpected indentation",
-      links: [],
-      object: nil,
-      git_blame_info: {
-        commit: :_, line_hash: "8d97b13e6750c908c25104463cd720d809a07218", original_line: 6, final_line: 6
-      }
-    },
-    {
-      path: "app1/views.py",
-      location: { start_line: 7, start_column: 17 },
-      id: "E113",
-      message: "unexpected indentation",
-      links: [],
-      object: nil,
-      git_blame_info: {
-        commit: :_, line_hash: "b3250f6063f80804987089c29421b404957cdf1f", original_line: 7, final_line: 7
-      }
-    },
     {
       path: "app1/views.py",
       location: { start_line: 6, start_column: 12 },

@@ -15,6 +15,8 @@ module Runners
 
     private
 
+    def having_user_defined_config?: () -> bool
+
     def prepare_config: () -> void
 
     def parse_result: (String) -> Array[Issue]
