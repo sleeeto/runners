@@ -10,6 +10,10 @@ Updated tools:
 
 - **SwiftLint** 0.44.0 -> 0.45.0 [#2765](https://github.com/sider/runners/pull/2765)
 
+Updated environments:
+
+- **devon_rex** 2.45.11 -> 2.46.0 [#2796](https://github.com/sider/runners/pull/2796) ([diff](https://github.com/sider/devon_rex/compare/2.45.11...2.46.0))
+
 ## 0.54.0
 
 [Full diff](https://github.com/sider/runners/compare/0.53.6...0.54.0)

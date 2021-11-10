@@ -8,7 +8,7 @@ s.add_test(
   issues: [
     {
       path: "app1/views.py",
-      location: { start_line: 6, start_column: 12 },
+      location: { start_line: 6, start_column: 13 },
       id: "E999",
       message: "IndentationError: unexpected indent",
       links: [],
