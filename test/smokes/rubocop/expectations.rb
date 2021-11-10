@@ -1,6 +1,6 @@
 s = Runners::Testing::Smoke
 
-default_version = "1.21.0"
+default_version = "1.22.3"
 
 s.add_test(
   "sandbox_rails",
