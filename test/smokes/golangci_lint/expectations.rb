@@ -1,6 +1,6 @@
 s = Runners::Testing::Smoke
 
-default_version = "1.42.1"
+default_version = "1.43.0"
 
 s.add_test(
   "target",
@@ -45,6 +45,17 @@ s.add_test(
       object: { severity: "", replacement: nil },
       git_blame_info: {
         commit: :_, line_hash: "eb0289be3964dc127bace61751fc7ef20ada1884", original_line: 11, final_line: 11
+      }
+    },
+    {
+      path: "sample.go",
+      location: { start_line: 15, start_column: 15 },
+      id: "gocritic:ioutilDeprecated",
+      message: "ioutilDeprecated: ioutil.ReadAll is deprecated, use io.ReadAll instead",
+      links: [],
+      object: { severity: "", replacement: nil },
+      git_blame_info: {
+        commit: :_, line_hash: "d21f5832439a3f40258c28d448f724e4489d7667", original_line: 15, final_line: 15
       }
     }
   ],
