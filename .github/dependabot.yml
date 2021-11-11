@@ -11,16 +11,14 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: ruby"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
       interval: weekly
       time: "09:00"
       timezone: Asia/Tokyo
-    rebase-strategy: "disabled"
-    
+
   # Docker images
   - package-ecosystem: docker
     directory: "/images/golangci_lint"
@@ -30,8 +28,7 @@ updates:
       timezone: Asia/Tokyo
     open-pull-requests-limit: 10
     labels: ["dependencies", "language: go"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: docker
     directory: "/images/hadolint"
     schedule:
@@ -40,8 +37,7 @@ updates:
       timezone: Asia/Tokyo
     open-pull-requests-limit: 10
     labels: ["dependencies", "language: misc"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: docker
     directory: "/images/shellcheck"
     schedule:
@@ -50,8 +46,7 @@ updates:
       timezone: Asia/Tokyo
     open-pull-requests-limit: 10
     labels: ["dependencies", "language: misc"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: docker
     directory: "/images/actionlint"
     schedule:
@@ -60,8 +55,7 @@ updates:
       timezone: Asia/Tokyo
     open-pull-requests-limit: 10
     labels: ["dependencies", "language: misc"]
-    rebase-strategy: "disabled"
-    
+
   # Java
   - package-ecosystem: gradle
     directory: "/images/checkstyle"
@@ -71,8 +65,7 @@ updates:
       timezone: Asia/Tokyo
     open-pull-requests-limit: 10
     labels: ["dependencies", "language: java"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: gradle
     directory: "/images/pmd_cpd"
     schedule:
@@ -83,8 +76,7 @@ updates:
     labels: ["dependencies", "language: java"]
     allow:
       - dependency-name: "*pmd-dist*"
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: gradle
     directory: "/images/pmd_java"
     schedule:
@@ -93,8 +85,7 @@ updates:
       timezone: Asia/Tokyo
     open-pull-requests-limit: 10
     labels: ["dependencies", "language: java"]
-    rebase-strategy: "disabled"
-    
+
   # Java (Kotlin)
   - package-ecosystem: gradle
     directory: "/images/detekt"
@@ -104,8 +95,7 @@ updates:
       timezone: Asia/Tokyo
     open-pull-requests-limit: 10
     labels: ["dependencies", "language: kotlin"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: gradle
     directory: "/images/ktlint"
     schedule:
@@ -114,8 +104,7 @@ updates:
       timezone: Asia/Tokyo
     open-pull-requests-limit: 10
     labels: ["dependencies", "language: kotlin"]
-    rebase-strategy: "disabled"
-    
+
   # JavaScript
   - package-ecosystem: npm
     directory: "/images/eslint"
@@ -126,8 +115,7 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: javascript"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: npm
     directory: "/images/jshint"
     schedule:
@@ -137,8 +125,7 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: javascript"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: npm
     directory: "/images/coffeelint"
     schedule:
@@ -148,8 +135,7 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: javascript"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: npm
     directory: "/images/remark_lint"
     schedule:
@@ -159,8 +145,7 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: markdown"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: npm
     directory: "/images/stylelint"
     schedule:
@@ -170,7 +155,6 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: css"]
-    rebase-strategy: "disabled"
 
   - package-ecosystem: npm
     directory: "/images/tyscan"
@@ -181,8 +165,7 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: typescript"]
-    rebase-strategy: "disabled"
-    
+
   # PHP
   - package-ecosystem: composer
     directory: "/images/code_sniffer"
@@ -195,8 +178,7 @@ updates:
     labels: ["dependencies", "language: php"]
     ignore:
       - dependency-name: "cakephp/cakephp-codesniffer" # We cannot support CakePHP 4.x still. See #748
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: composer
     directory: "/images/phinder"
     schedule:
@@ -206,7 +188,6 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: php"]
-    rebase-strategy: "disabled"
 
   - package-ecosystem: composer
     directory: "/images/phpmd"
@@ -217,8 +198,7 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: php"]
-    rebase-strategy: "disabled"
-    
+
   # Python
   - package-ecosystem: pip
     directory: "/images/cpplint"
@@ -228,8 +208,7 @@ updates:
       timezone: Asia/Tokyo
     open-pull-requests-limit: 10
     labels: ["dependencies", "language: c/c++"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: pip
     directory: "/images/metrics_complexity"
     schedule:
@@ -238,8 +217,7 @@ updates:
       timezone: Asia/Tokyo
     open-pull-requests-limit: 10
     labels: ["dependencies", "language: misc"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: pip
     directory: "/images/flake8"
     schedule:
@@ -248,8 +226,7 @@ updates:
       timezone: Asia/Tokyo
     open-pull-requests-limit: 10
     labels: ["dependencies", "language: python"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: pip
     directory: "/images/pylint"
     schedule:
@@ -258,8 +235,7 @@ updates:
       timezone: Asia/Tokyo
     open-pull-requests-limit: 10
     labels: ["dependencies", "language: python"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: pip
     directory: "/images/actionlint"
     schedule:
@@ -268,8 +244,7 @@ updates:
       timezone: Asia/Tokyo
     open-pull-requests-limit: 10
     labels: ["dependencies", "language: misc"]
-    rebase-strategy: "disabled"
-    
+
   # Ruby
   - package-ecosystem: bundler
     directory: "/images/brakeman"
@@ -280,8 +255,7 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: ruby"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: bundler
     directory: "/images/goodcheck"
     schedule:
@@ -291,8 +265,7 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: misc"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: bundler
     directory: "/images/haml_lint"
     schedule:
@@ -302,8 +275,7 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: ruby"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: bundler
     directory: "/images/querly"
     schedule:
@@ -313,8 +285,7 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: ruby"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: bundler
     directory: "/images/reek"
     schedule:
@@ -324,8 +295,7 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: ruby"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: bundler
     directory: "/images/rubocop"
     schedule:
@@ -335,8 +305,7 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: ruby"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: bundler
     directory: "/images/scss_lint"
     schedule:
@@ -346,8 +315,7 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: css"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: bundler
     directory: "/images/slim_lint"
     schedule:
@@ -357,8 +325,7 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: ruby"]
-    rebase-strategy: "disabled"
-    
+
   - package-ecosystem: bundler
     directory: "/images/secret_scan"
     schedule:
@@ -368,4 +335,3 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     labels: ["dependencies", "language: ruby"]
-    rebase-strategy: "disabled"
