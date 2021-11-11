@@ -1,6 +1,6 @@
 s = Runners::Testing::Smoke
 
-default_version = "0.7.2"
+default_version = "0.8.0"
 
 s.add_test(
   "success",
@@ -10,7 +10,7 @@ s.add_test(
       id: "SC2006",
       path: "test_script",
       location: { start_line: 3, start_column: 3, end_line: 3, end_column: 8 },
-      message: "Use $(...) notation instead of legacy backticked `...`.",
+      message: "Use $(...) notation instead of legacy backticks `...`.",
       links: %w[https://github.com/koalaman/shellcheck/wiki/SC2006],
       object: { code: 2006, severity: "style", fix: { replacements: :_ } },
       git_blame_info: {
@@ -395,7 +395,7 @@ s.add_test(
       path: "abc.bash",
       location: { start_line: 3, start_column: 3, end_line: 3, end_column: 8 },
       id: "SC2006",
-      message: "Use $(...) notation instead of legacy backticked `...`.",
+      message: "Use $(...) notation instead of legacy backticks `...`.",
       links: %w[https://github.com/koalaman/shellcheck/wiki/SC2006],
       object: { code: 2006, severity: "style", fix: { replacements: :_ } },
       git_blame_info: {
@@ -406,7 +406,7 @@ s.add_test(
       path: "abc.sh",
       location: { start_line: 3, start_column: 3, end_line: 3, end_column: 8 },
       id: "SC2006",
-      message: "Use $(...) notation instead of legacy backticked `...`.",
+      message: "Use $(...) notation instead of legacy backticks `...`.",
       links: %w[https://github.com/koalaman/shellcheck/wiki/SC2006],
       object: { code: 2006, severity: "style", fix: { replacements: :_ } },
       git_blame_info: {
