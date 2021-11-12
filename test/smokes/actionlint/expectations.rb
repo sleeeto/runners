@@ -108,7 +108,7 @@ s.add_test(
       id: "events",
       path: "ignore.yml",
       location: { start_line: 1, start_column: 5 },
-      message: "unknown Webhook event \"click\". see https://docs.github.com/en/actions/reference/events-that-trigger-workflows#webhook-events for list of all Webhook event names",
+      message: "unknown Webhook event \"click\". see https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#webhook-events for list of all Webhook event names",
       object: { shellcheck: nil, pyflakes: nil },
       links: [],
       git_blame_info: { commit: :_, line_hash: "92d335cfda83dc2c0fe9009891ea4eae9f96f17c", original_line: 1, final_line: 1 }
@@ -146,7 +146,7 @@ s.add_test(
       id: "events",
       path: "multiple.yml",
       location: { start_line: 1, start_column: 5 },
-      message: "unknown Webhook event \"click\". see https://docs.github.com/en/actions/reference/events-that-trigger-workflows#webhook-events for list of all Webhook event names",
+      message: "unknown Webhook event \"click\". see https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#webhook-events for list of all Webhook event names",
       object: { shellcheck: nil, pyflakes: nil },
       links: [],
       git_blame_info: { commit: :_, line_hash: "92d335cfda83dc2c0fe9009891ea4eae9f96f17c", original_line: 1, final_line: 1 }
@@ -164,7 +164,7 @@ s.add_test(
       id: "syntax-check",
       path: "multiple.yml",
       location: { start_line: 8, start_column: 5 },
-      message: "unexpected key \"unexpected\" for \"job\" section. expected one of \"concurrency\", \"container\", \"continue-on-error\", \"defaults\", \"env\", \"environment\", \"if\", \"name\", \"needs\", \"outputs\", \"permissions\", \"runs-on\", \"services\", \"steps\", \"strategy\", \"timeout-minutes\"",
+      message: "unexpected key \"unexpected\" for \"job\" section. expected one of \"concurrency\", \"container\", \"continue-on-error\", \"defaults\", \"env\", \"environment\", \"if\", \"name\", \"needs\", \"outputs\", \"permissions\", \"runs-on\", \"secrets\", \"services\", \"steps\", \"strategy\", \"timeout-minutes\", \"uses\", \"with\"",
       object: { shellcheck: nil, pyflakes: nil },
       links: [],
       git_blame_info: { commit: :_, line_hash: "fb5ad3629930fef3a268a0542176342a0fd53fb7", original_line: 8, final_line: 8 }
@@ -182,7 +182,7 @@ s.add_test(
       id: "events",
       path: "onclick.yml",
       location: { start_line: 4, start_column: 5 },
-      message: "unknown Webhook event \"click\". see https://docs.github.com/en/actions/reference/events-that-trigger-workflows#webhook-events for list of all Webhook event names",
+      message: "unknown Webhook event \"click\". see https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#webhook-events for list of all Webhook event names",
       object: { shellcheck: nil, pyflakes: nil },
       links: [],
       git_blame_info: { commit: :_, line_hash: "92d335cfda83dc2c0fe9009891ea4eae9f96f17c", original_line: 4, final_line: 4 }
