@@ -1,6 +1,6 @@
 s = Runners::Testing::Smoke
 
-default_version = "2.5"
+default_version = "2.6.1"
 
 s.add_test(
   "default",
@@ -91,7 +91,7 @@ s.add_test(
     {
       id: "invalidContainer",
       path: "src/erase.cpp",
-      location: { start_line: 9, start_column: 17 },
+      location: { start_line: 9, start_column: 28 },
       message: "Using iterator to local container 'items' that may be invalid.",
       links: [],
       object: {
@@ -499,6 +499,45 @@ s.add_test(
       }
     },
     {
+      id: "misra-c2012-2.3",
+      path: "bad.h",
+      location: { start_line: 6, start_column: 13 },
+      message: "misra violation (use --rule-texts=<file> to get proper output)",
+      links: [],
+      object: {
+        severity: "style", verbose: nil, inconclusive: false, cwe: nil, location_info: nil
+      },
+      git_blame_info: {
+        commit: :_, line_hash: "4d167fb61c43f2ed96ebf38f2df36c64998c9e63", original_line: 6, final_line: 6
+      }
+    },
+    {
+      id: "misra-c2012-2.3",
+      path: "bad.h",
+      location: { start_line: 8, start_column: 18 },
+      message: "misra violation (use --rule-texts=<file> to get proper output)",
+      links: [],
+      object: {
+        severity: "style", verbose: nil, inconclusive: false, cwe: nil, location_info: nil
+      },
+      git_blame_info: {
+        commit: :_, line_hash: "2c2e7d69dcd86f6567c3a3ae7a7b966ceee93059", original_line: 8, final_line: 8
+      }
+    },
+    {
+      id: "misra-c2012-2.5",
+      path: "bad.h",
+      location: { start_line: 12, start_column: 0 },
+      message: "misra violation (use --rule-texts=<file> to get proper output)",
+      links: [],
+      object: {
+        severity: "style", verbose: nil, inconclusive: false, cwe: nil, location_info: nil
+      },
+      git_blame_info: {
+        commit: :_, line_hash: "014715ec1636dfc3d1f5bde7579605112f43e514", original_line: 12, final_line: 12
+      }
+    },
+    {
       id: "misra-c2012-21.1",
       path: "bad.h",
       location: { start_line: 2, start_column: 0 },
@@ -509,6 +548,19 @@ s.add_test(
       },
       git_blame_info: {
         commit: :_, line_hash: "2680ff859efce882776fc741b04adaa2836d9620", original_line: 2, final_line: 2
+      }
+    },
+    {
+      id: "misra-c2012-8.4",
+      path: "bad.c",
+      location: { start_line: 3, start_column: 6 },
+      message: "misra violation (use --rule-texts=<file> to get proper output)",
+      links: [],
+      object: {
+        severity: "style", verbose: nil, inconclusive: false, cwe: nil, location_info: nil
+      },
+      git_blame_info: {
+        commit: :_, line_hash: "b76c81194ab6cebc1e95c3cae2565e01498ee6ec", original_line: 3, final_line: 3
       }
     },
     {
@@ -572,6 +624,19 @@ s.add_test(
       }
     },
     {
+      id: "misra-c2012-16.6",
+      path: "src/foo/test.cpp",
+      location: { start_line: 10, start_column: 3 },
+      message: "misra violation 1606 with no text in the supplied rule-texts-file",
+      links: [],
+      object: {
+        severity: "style", verbose: nil, inconclusive: false, cwe: nil, location_info: nil
+      },
+      git_blame_info: {
+        commit: :_, line_hash: "8b69aac82f9b73e5c5bf05158f2556fda91e6d0b", original_line: 10, final_line: 10
+      }
+    },
+    {
       id: "misra-c2012-21.6",
       path: "src/foo/test.cpp",
       location: { start_line: 2, start_column: 0 },
@@ -582,6 +647,33 @@ s.add_test(
       },
       git_blame_info: {
         commit: :_, line_hash: "d42248803e602b7ee4448ae8d372f0f95421205f", original_line: 2, final_line: 2
+      }
+    },
+    {
+      id: "misra-c2012-8.2",
+      path: "src/foo/test.cpp",
+      location: { start_line: 4, start_column: 17 },
+      message: "misra violation 802 with no text in the supplied rule-texts-file",
+      links: [],
+      object: {
+        severity: "style", verbose: nil, inconclusive: false, cwe: nil, location_info: nil
+      },
+      git_blame_info: {
+        commit: :_, line_hash: "7cc7dc8c4ce28ca449fb577c709482b667217c29", original_line: 4, final_line: 4
+      }
+    },
+
+    {
+      id: "misra-c2012-8.2",
+      path: "src/foo/test.cpp",
+      location: { start_line: 5, start_column: 17 },
+      message: "misra violation 802 with no text in the supplied rule-texts-file",
+      links: [],
+      object: {
+        severity: "style", verbose: nil, inconclusive: false, cwe: nil, location_info: nil
+      },
+      git_blame_info: {
+        commit: :_, line_hash: "717ba10a31742b5abc89eecae61f979f1ada588b", original_line: 5, final_line: 5
       }
     }
   ],
@@ -1025,9 +1117,9 @@ s.add_test(
       }
     },
     {
-      id: "misra-c2012-10.4",
+      id: "misra-c2012-10.3",
       path: "c_sample.c",
-      location: { start_line: 12, start_column: 14 },
+      location: { start_line: 12, start_column: 10 },
       message: "misra violation (use --rule-texts=<file> to get proper output)",
       links: [],
       object: {
@@ -1048,6 +1140,19 @@ s.add_test(
       },
       git_blame_info: {
         commit: :_, line_hash: "ee4325a254e6006d8385abf71cabf88046b3e531", original_line: 5, final_line: 5
+      }
+    },
+    {
+      path: "c_sample.c",
+      location: { start_line: 3, start_column: 8 },
+      id: "misra-c2012-8.4",
+      message: "misra violation (use --rule-texts=<file> to get proper output)",
+      links: [],
+      object: {
+        severity: "style", verbose: nil, inconclusive: false, cwe: nil, location_info: nil
+      },
+      git_blame_info: {
+        commit: :_, line_hash: "72741f4c06e9f36e6bfdc26d7d93d2b73547eb66", original_line: 3, final_line: 3
       }
     },
     {
@@ -1092,6 +1197,32 @@ s.add_test(
       links: [],
       object: {
         severity: "error", verbose: nil, inconclusive: false, cwe: "788", location_info: "Array index out of bounds"
+      },
+      git_blame_info: {
+        commit: :_, line_hash: "c54a96ab932a5b6272b9ce8d62d62343672e90f5", original_line: 10, final_line: 10
+      }
+    },
+    {
+      id: "missingReturn",
+      path: "source/test.c++",
+      location: { start_line: 10, start_column: 3 },
+      message: "Found a exit path from function with non-void return type that has missing return statement",
+      links: [],
+      object: {
+        severity: "error", verbose: nil, inconclusive: false, cwe: "758", location_info: nil
+      },
+      git_blame_info: {
+        commit: :_, line_hash: "e1eb8778af7c662379f02ee0c006455be31c8a16", original_line: 10, final_line: 10
+      }
+    },
+    {
+      path: "source/サンプル/test.CPP",
+      location: { start_line: 10, start_column: 3 },
+      id: "missingReturn",
+      message: "Found a exit path from function with non-void return type that has missing return statement",
+      links: [],
+      object: {
+        severity: "error", verbose: nil, inconclusive: false, cwe: "758", location_info: nil
       },
       git_blame_info: {
         commit: :_, line_hash: "c54a96ab932a5b6272b9ce8d62d62343672e90f5", original_line: 10, final_line: 10
