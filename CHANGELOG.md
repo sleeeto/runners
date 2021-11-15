@@ -8,11 +8,31 @@ All notable changes to this project will be documented in this file.
 
 Updated tools:
 
+- **actionlint** 1.6.4 -> 1.6.7 [#2797](https://github.com/sider/runners/pull/2797)
+- **Brakeman** 5.1.1 -> 5.1.2 [#2770](https://github.com/sider/runners/pull/2770)
+- **Checkstyle** 9.0 -> 9.1 [#2776](https://github.com/sider/runners/pull/2776)
+- **CoffeeLint** 5.0.4 to 5.2.0 [#2793](https://github.com/sider/runners/pull/2793)
+- **Cppcheck** 2.5 -> 2.6.1 [#2764](https://github.com/sider/runners/pull/2764)
+- **Flake8** 3.9.2 -> 4.0.1 [#2751](https://github.com/sider/runners/pull/2751)
+- **GolangCI-Lint** 1.42.1 -> 1.43.0 [#2784](https://github.com/sider/runners/pull/2784)
+- **LanguageTool** 5.4 -> 5.5 [#2725](https://github.com/sider/runners/pull/2725)
+- **Phinder** 0.9.2 -> 0.9.3 [#2752](https://github.com/sider/runners/pull/2752)
+- **PHP_CodeSniffer** 3.6.0 -> 3.6.1 [#2746](https://github.com/sider/runners/pull/2746)
+- **PMD CPD** 6.39.0 -> 6.40.0 [#2775](https://github.com/sider/runners/pull/2775)
+- **PMD Java** 6.39.0 -> 6.40.0 [#2777](https://github.com/sider/runners/pull/2777)
+- **ShellCheck** 0.7.2 -> 0.8.0 [#2783](https://github.com/sider/runners/pull/2783)
 - **SwiftLint** 0.44.0 -> 0.45.0 [#2765](https://github.com/sider/runners/pull/2765)
 
 Updated environments:
 
-- **devon_rex** 2.45.11 -> 2.46.0 [#2796](https://github.com/sider/runners/pull/2796) ([diff](https://github.com/sider/devon_rex/compare/2.45.11...2.46.0))
+- **devon_rex** 2.45.11 -> 2.46.0 [#2796](https://github.com/sider/runners/pull/2796) ([diff](https://github.com/sider/devon_rex/compare/2.45.11...2.46.0)) ([changelog](https://github.com/sider/devon_rex/blob/master/CHANGELOG.md#2460))
+    - **Python 3.10** environment for tools using Python: actionlint, cpplint, Flake8, Metrics Complexity and Pylint.
+
+Misc:
+
+- **actionlint** Bump pyflakes from 2.3.1 to 2.4.0 [#2740](https://github.com/sider/runners/pull/2740)
+- **actionlint** Bump shellcheck from 0.7.2 to 0.8.0 [#2794](https://github.com/sider/runners/pull/2794)
+- **remark-lint** Bump remark-preset-lint-recommended from 6.1.0 to 6.1.1 [#2733](https://github.com/sider/runners/pull/2733)
 
 ## 0.54.0
 
@@ -683,7 +703,7 @@ Misc:
 
 [Full diff](https://github.com/sider/runners/compare/0.39.2...0.39.3)
 
-- **PMD Java** NoMethodError: undefined method `gsub' for 2:Integer [#1818](https://github.com/sider/runners/pull/1818)
+- **PMD Java** NoMethodError: undefined method 'gsub' for 2:Integer [#1818](https://github.com/sider/runners/pull/1818)
 
 ## 0.39.2
 
