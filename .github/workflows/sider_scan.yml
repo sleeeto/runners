@@ -44,7 +44,6 @@ jobs:
         with:
           name: radump
           path: /tmp
-      - run: ls /tmp
       - run: |
           echo { \
             \"user\": { \"contactEmail\": \"dev@siderlabs.com\" }, \
@@ -74,7 +73,6 @@ jobs:
               \"enableDetailReport\": true \
             } \
           } > .siderscan.json
-      - run: cat .siderscan.json
       - name: Start analysis
         working-directory: /scan
         run: |
