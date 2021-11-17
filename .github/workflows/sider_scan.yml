@@ -3,7 +3,8 @@ name: Sidr Scan Runner
 on:
   schedule:
     - cron: '0 5 * * 1-5'
-
+  workflow_dispatch:
+  
 jobs:
   restore-job:
     runs-on: ubuntu-20.04
