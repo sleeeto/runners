@@ -55,11 +55,11 @@ jobs:
                   { \
                     \"type\": \"smtp\", \
                     \"port\": 587, \
-                    \"host\": \"email-smtp.ap-northeast-1.amazonaws.com\", \
+                    \"host\": \"${{ secrets.siderscan_mailserver }}\", \
                     \"auth\": { \
                       \"type\": \"login\", \
-                      \"user\": \"${{ secrets.mail_key }}\", \
-                      \"pass\": \"${{ secrets.mail_secret }}\" \
+                      \"user\": \"${{ secrets.siderscan_mail_key }}\", \
+                      \"pass\": \"${{ secrets.siderscan_mail_secret }}\" \
                     }, \
                     \"secure\": true \
                   } \
