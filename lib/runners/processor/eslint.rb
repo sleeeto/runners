@@ -32,7 +32,7 @@ module Runners
     end
 
     CONSTRAINTS = {
-      "eslint" => Gem::Requirement.new(">= 5.0.0", "< 9.0.0").freeze,
+      "eslint" => Gem::Requirement.new(">= 5.0.0", "< 8.0.0").freeze,
     }.freeze
 
     CUSTOM_FORMATTER = (Pathname(Dir.home) / "custom-eslint-json-formatter.js").to_path.freeze
