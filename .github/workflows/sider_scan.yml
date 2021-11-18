@@ -1,4 +1,4 @@
-name: Sidr Scan Runner
+name: Sider Scan Runner
 
 on:
   schedule:
@@ -39,7 +39,6 @@ jobs:
         with:
           ref: master
           persist-credentials: false
-          path: builds
       - name: Download radump
         continue-on-error: true
         uses: actions/download-artifact@v2
@@ -56,11 +55,11 @@ jobs:
                   { \
                     \"type\": \"smtp\", \
                     \"port\": 587, \
-                    \"host\": \"${{ secrets.siderscan_mailserver }}\", \
+                    \"host\": \"${{ secrets.SIDERSCAN_MAILSERVER }}\", \
                     \"auth\": { \
                       \"type\": \"login\", \
-                      \"user\": \"${{ secrets.siderscan_mail_key }}\", \
-                      \"pass\": \"${{ secrets.siderscan_mail_secret }}\" \
+                      \"user\": \"${{ secrets.SIDERSCAN_MAIL_KEY }}\", \
+                      \"pass\": \"${{ secrets.SIDERSCAN_MAIL_SECRET }}\" \
                     }, \
                     \"secure\": true \
                   } \
