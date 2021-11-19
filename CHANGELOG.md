@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 
 [Full diff](https://github.com/sider/runners/compare/0.55.0...HEAD)
 
+Misc:
+
+- **ESLint** Allow ESLint8.x in user dependency [#2820](https://github.com/sider/runners/pull/2820)
+
 ## 0.55.0
 
 [Full diff](https://github.com/sider/runners/compare/0.54.0...0.55.0)
