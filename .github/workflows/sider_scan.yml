@@ -18,8 +18,7 @@ jobs:
         with:
           ref: master
           persist-credentials: false
-      - name: Download the artifact
-        id: latest_artifact
+      - name: Download the passed radump
         continue-on-error: true
         run: |
           wget --header "Accept: application/vnd.github.v3+json" --header "Authorization: token ${{github.token}}" https://api.github.com/repos/${{github.repository}}/actions/artifacts -O - \
