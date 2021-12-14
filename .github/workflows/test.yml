@@ -15,7 +15,14 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - run: sudo npm install --global npm@7
+      - run: |
+          echo "::set-output name=node::$(jq --raw-output '.engines.node' package.json)"
+          echo "::set-output name=npm::$(jq --raw-output '.engines.npm' package.json)"
+        id: node-versions
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ steps.node-versions.outputs.node }}
+      - run: npm install --global "npm@${{ steps.node-versions.outputs.npm }}"
       - run: bundle exec rake test
         env:
           TESTOPTS: --verbose
