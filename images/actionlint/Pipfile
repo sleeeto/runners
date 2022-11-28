@@ -4,4 +4,4 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [packages]
-pyflakes = "==2.4.0"
+pyflakes = "==3.0.1"
